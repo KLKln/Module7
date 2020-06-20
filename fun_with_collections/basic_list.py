@@ -2,19 +2,16 @@
 def make_list():
     user_num = []
     user_number = get_input()
-    print('a is set to:', 5)
-    while True:
-        try:
-            for x in range(2):
-                user_number
-                if user_number.isdigit():
-                    user_num.append(user_number)
-                    break
-                else:
-                    raise TypeError
-        except TypeError:
-            print('Numbers only please.')
-            continue
+    try:
+        for i in range(0,3):
+            user_number
+            if user_number.isdigit():
+                user_num.append(int(user_number))
+            else:
+                raise TypeError
+    except TypeError:
+        print('Numbers only please.')
+
 
     return user_num
 
