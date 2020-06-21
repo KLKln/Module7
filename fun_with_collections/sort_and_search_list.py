@@ -5,48 +5,29 @@ Last date modified: 6/21/2020
 This program will take user input of numbers and store them in a list.
 """
 
+user_list = [21, 31, 56, 78, 22, 4, 13, 42, 9]
 
-def get_input():
-    """
-    Use reST style.
-    :return: the number user entered
-    """
-    while True:
-        try:
-            user_input = input(print('Enter a number to add to the list: '))
-            if user_input.isalpha():
-                raise ValueError
-        except ValueError:
-            print('Positive numbers only please')
-            continue
-
-        return user_input
-
-
-def make_list():
-    """
-    Use reST style.
-    :return: the 3 number user entered
-    raises TypeError: raises an exception if user uses alphabet
-    """
-    user_list = []
-
-    for i in range(0, 3):
-        user_number = get_input()
-        user_list.append(int(user_number))
-
-    print(user_list)
-    return user_list
-
-def search_list():
+def search_list(user_list):
     #return the index of the object in the list
+    number_search = int(input('What number would you like to search for: '))
+    for i in range(len(user_list)):
+        if user_list[i] == number_search:
+            index = user_list.index(number_search)
+            return print('your number is at index', index)
+
+        else:
+            return print(-1)
+
+
+
     # or -1 if not found
-    pass
 
-def sort_list():
+
+def sort_list(user_list):
     #sorts the list
-    pass
-
+    user_list.sort() #no return because it calls a built in python function
+    print(user_list)
 
 if __name__ == '__main__':
-    make_list()
+    search_list(user_list)
+    sort_list(user_list)
