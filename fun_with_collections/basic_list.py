@@ -1,9 +1,26 @@
+"""
+Program:basic_list.py
+Author: Kelly Klein
+Last date modified: 6/21/2020
+This program will take user input of numbers and store them in a lsit.
+"""
+
+
 def get_input():
+    """
+    Use reST style.
+    :return: the number user entered
+    """
     user_input = input(print('Enter a number to add to the list: '))
     return user_input
 
 
 def make_list():
+    """
+    Use reST style.
+    :return: the 3 number user entered
+    raises TypeError: raises an exception if user uses alphabet
+    """
     user_list = []
 
     for i in range(0, 3):
