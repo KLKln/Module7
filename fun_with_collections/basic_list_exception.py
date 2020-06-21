@@ -11,8 +11,16 @@ def get_input():
     Use reST style.
     :return: the number user entered
     """
-    user_input = input(print('Enter a number to add to the list: '))
-    return user_input
+    while True:
+        try:
+            user_input = input(print('Enter a number to add to the list: '))
+            if user_input.isalpha():
+                raise ValueError
+        except ValueError:
+            print('Positive numbers only please')
+            continue
+
+        return user_input
 
 
 def make_list():
@@ -24,14 +32,9 @@ def make_list():
     user_list = []
 
     for i in range(0, 3):
-        try:
-            user_number = get_input()
-            if user_number.isalpha():
-                raise TypeError
-            else:
-                user_list.append(int(user_number))
-        except TypeError:
-            print('Numbers only please.')
+        user_number = get_input()
+        user_list.append(int(user_number))
+
     print(user_list)
     return user_list
 
