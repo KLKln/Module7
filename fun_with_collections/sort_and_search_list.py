@@ -1,5 +1,5 @@
 """
-Program:basic_list_exception.py
+Program:sort_and_search_list.py
 Author: Kelly Klein
 Last date modified: 6/21/2020
 This program will take user input of numbers and store them in a list.
@@ -16,8 +16,6 @@ def get_input():
             user_input = input(print('Enter a number to add to the list: '))
             if user_input.isalpha():
                 raise ValueError
-            if int(user_input) < 0:
-                raise ValueError
         except ValueError:
             print('Positive numbers only please')
             continue
@@ -28,7 +26,7 @@ def get_input():
 def make_list():
     """
     Use reST style.
-    :return: the 3 numbers user entered
+    :return: the 3 number user entered
     raises TypeError: raises an exception if user uses alphabet
     """
     user_list = []
