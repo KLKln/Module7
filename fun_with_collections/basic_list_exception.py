@@ -1,5 +1,5 @@
 """
-Program:basic_list.py
+Program:basic_list_exception.py
 Author: Kelly Klein
 Last date modified: 6/21/2020
 This program will take user input of numbers and store them in a list.
