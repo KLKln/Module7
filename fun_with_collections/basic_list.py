@@ -1,5 +1,5 @@
 def get_input():
-    user_input = input(print('Enter a positive number to add to the list: '))
+    user_input = input(print('Enter a number to add to the list: '))
     return user_input
 
 
@@ -15,6 +15,7 @@ def make_list():
                 user_list.append(int(user_number))
         except TypeError:
             print('Numbers only please.')
+    print(user_list)
     return user_list
 
 
