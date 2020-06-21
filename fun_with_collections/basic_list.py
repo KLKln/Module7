@@ -1,23 +1,22 @@
+def get_input():
+    user_input = input(print('Enter a positive number to add to the list: '))
+    return user_input
+
 
 def make_list():
-    user_num = []
-    user_number = get_input()
-    try:
-        for i in range(0,3):
-            user_number
-            if user_number.isdigit():
-                user_num.append(int(user_number))
-            else:
+    user_list = []
+
+    for i in range(0, 3):
+        try:
+            user_number = get_input()
+            if user_number.isalpha():
                 raise TypeError
-    except TypeError:
-        print('Numbers only please.')
+            else:
+                user_list.append(int(user_number))
+        except TypeError:
+            print('Numbers only please.')
+    return user_list
 
 
-    return user_num
-
-
-def get_input():
-
-
-    pass
-
+if __name__ == '__main__':
+    make_list()
