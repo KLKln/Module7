@@ -38,6 +38,15 @@ def make_list():
     print(user_list)
     return user_list
 
+def search_list():
+    #return the index of the object in the list
+    # or -1 if not found
+    pass
+
+def sort_list():
+    #sorts the list
+    pass
+
 
 if __name__ == '__main__':
     make_list()

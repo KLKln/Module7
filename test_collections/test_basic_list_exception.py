@@ -20,6 +20,5 @@ class MyTestCase(unittest.TestCase):
             basic_list_exception.make_list()
 
 
-
 if __name__ == '__main__':
     unittest.main()

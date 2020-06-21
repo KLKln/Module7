@@ -17,9 +17,13 @@ def get_input():
             if user_input.isalpha():
                 raise ValueError
             if int(user_input) < 0:
+                print('Too low!')
+                raise ValueError
+            if int(user_input) >= 50:
+                print('Too high!')
                 raise ValueError
         except ValueError:
-            print('Positive numbers only please')
+            print('Positive numbers 50 or below please')
             continue
 
         return user_input
