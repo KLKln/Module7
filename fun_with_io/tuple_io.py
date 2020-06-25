@@ -1,4 +1,11 @@
 import os as os
+"""
+Program: tuple_io.py
+Author: Kelly Klein
+Last date modified: 6/24/2020
+This program will take input from user for student name and test scores and 
+    write them to a file, and print them back.
+"""
 
 """
 f = open('testscores.txt', 'w')
@@ -7,6 +14,7 @@ input_list = ['5',\t '3'\t, '5'\n]
 f.writelines(input_list)
 f.close()
 """
+
 
 
 def write_to_file(student_name_and_scores):

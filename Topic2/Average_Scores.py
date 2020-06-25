@@ -1,5 +1,5 @@
 """
-Program: tuple_io.py
+Program: Average_Scores.py
 Author: Kelly Klein
 Last date modified: 6/24/2020
 This program will take an *arg and **kwarg and return a string with the given information.
