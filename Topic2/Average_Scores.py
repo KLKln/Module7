@@ -1,37 +1,47 @@
-
 def average_scores_args_only(*args):
     # Use *args for average calculation
     result = 0
     for x in args:
         result += x
         average = sum(args) / len(args)
-        return average
+        return round(average, 2)
 
 
 def average_scores(*avg, **kwargs):
+    fir_nam = ''
+    la_name = ''
+    fu_name = ''
+    crse = ''
     result = 0
     for x in avg:
         result += x
-        average = sum(avg) / len(avg)
-        return average
+        average = round(sum(avg) / len(avg), 2)
     for key, value in kwargs.items():
-        print("%s == %s" % (key, value))
+        if key == 'first_name':
+            first_name = fir_nam
+        if key == 'last_name':
+            last_name = la_name
+            full_name = la_name, fir_nam
+        if key == 'course':
+            course = crse
+        if key == 'gpa':
+            average = average_scores_args_only()
+        return print("%s == %s" % (key, value))
 
 
+
+#average_scores(gpa = {4, 4, 3, 2, 3, 4, 4}, first_name = 'Kelly', last_name = 'Klein', course = 'python')
+
+# def student_average(average_scores())
 # 'Result: name = M gpa = 3.2 course = Python with current average 30.0
 
 
 if __name__ == '__main__':
-    kelly = {'Name': 'kelly', 'course': 'Python', 'gpa': average_scores_args_only(4, 3, 4, 4)}
-    leslie = {'Name': 'leslie', 'course': 'Database Design', 'gpa': average_scores_args_only(3, 2, 3, 4, 3.5, 2, 4, 3)}
-    shep = {'Name': 'shep', 'course': 'Java 2', 'gpa': average_scores_args_only(3, 4, 2.5, 4.2, 3.2, 1)}
-    average_scores(**kelly)
-    average_scores(**leslie)
-    average_scores(**shep)
-    #print(average_scores((4,3,3,4, name = )))
+    average_scores(first_name='Kelly', last_name='Klein', course='python',
+                   gpa=(4, 4, 3, 2, 3, 4, 4))
 
-#ky value pair
-#key is first name
-#value is userinput?
+# ky value pair
+# key is first name
+# value is userinput?
 
-#first_name = 'joe'
+# first_name = 'joe'
